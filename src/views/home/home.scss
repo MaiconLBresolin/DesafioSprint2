@@ -1,0 +1,155 @@
+
+.main{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #e5e5e5;
+    height: 100%;
+    width: 100%;
+}
+
+#form{
+    background-color: #fff;
+    border-radius: 0.313rem;
+    height: 100%;
+    width: 80%;
+    max-width: 38.75rem;
+    max-height: 47.688rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+}
+
+.head{
+    align-items: center;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.img {
+    padding-top: 1.75rem;
+    display: flex;
+}
+
+.title{
+    margin-top: 2rem;
+    font-size: 2.25rem;
+    line-height: 1.5rem;
+    padding: 0.938rem;
+    font-family: "Inter", sans-serif;
+    padding-bottom: 3.125rem;
+}
+
+.inputcontainer {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.boxContainer {
+    display: flex;
+    align-items: center;
+
+}
+
+.boxcontainer > label {
+    color: #111111;
+    padding-left: 0.5rem;
+}
+  
+.boxcontainer > input{
+    width: 0.8rem;
+    height: 0.8rem;
+}
+
+.card {
+    display: grid; 
+    grid-template-columns: 1fr 1fr; 
+    grid-template-rows: 1fr 1fr 1fr 1fr; 
+    gap: 0 1.375rem;
+    grid-template-areas: 
+      "fullnameArea fullnameArea"
+      "emailArea phoneArea"
+      "passwordArea birthdayArea"
+      "checkArea register"; 
+}
+  .fullnameArea {
+    grid-area: fullnameArea; 
+}
+  .emailArea {
+     grid-area: emailArea; 
+}
+  .phoneArea {
+     grid-area: phoneArea; 
+
+}
+  .passwordArea {
+     grid-area: passwordArea; 
+}
+  .birthdayArea {
+     grid-area: birthdayArea; 
+}
+  .checkArea {
+     grid-area: checkArea; 
+}
+  .register {
+     grid-area: register;
+     display: flex;
+     justify-content: flex-end; 
+}
+
+input {
+    border: 0.125rem solid #aaaaaa;
+    border-radius: 0.25rem;
+    height: 2.5rem;
+    width: 99%;
+}
+
+label {
+    color: #767676;
+    font-family: "Nunito", sans-serif;
+}
+
+p{
+    color:#ffffff; /* Permanecerá branco até a lógica de validações estar completa*/
+}
+
+input[type="date"]::-webkit-calendar-picker-indicator {
+    background: url(@/assets/seta.png);
+}
+
+.btn-register{
+  width: 5.063rem;
+  height: 2.5rem;
+  max-width: 5.063rem;
+  max-height: 2.5rem;
+  border-radius: 0.625rem;
+  border-style: none;
+  background-color: #0DBDBD;
+  color: #FFFFFF;
+}
+
+@media (max-width: 650px){
+    .main{
+      background-color: #ffffff;
+    }
+  
+    .form{  /*form<->card*/
+      display: grid; 
+      grid-template-columns: 1fr 1fr; 
+      grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr; 
+      gap: 3.75rem 2.5rem; 
+      grid-template-areas: 
+      "fullName fullName"
+      "email email"
+      "password password"
+      "phone birthday"
+      "acceptTerms acceptTerms"
+      "registerButton registerButton"; 
+    }
+  }
+  
+
+
